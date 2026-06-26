@@ -109,9 +109,13 @@ if st.button("Executar Pipeline PLN", type="primary"):
 
         # 9. Detecção de Setor (Palavras-chave)
         setores_regras = {
-            "Suporte Técnico": ["erro", "falha", "bug", "sistema", "aplicativo", "travou"],
-            "Financeiro": ["pagamento", "boleto", "cobrança", "fatura", "reembolso"],
-            "Cancelamento": ["cancelar", "cancelamento", "encerrar", "desistir"]
+            "Suporte Técnico": [ "erro", "falha", "bug", "sistema", "aplicativo", "app","travou", "travado", "carregando", "não abre", "não funciona","fora do ar", "instável", "lentidão", "crash", "fechou",
+            "problema técnico", "não consigo acessar", "não entra"],
+            "Financeiro": ["pagamento", "pagar", "boleto", "fatura", "cobrança","cobrado", "cobrança indevida", "reembolso", "estorno","restituição", "valor", "dinheiro", "custo", "preço","fatura vencida",
+            "cartão", "débito", "saldo","erro de cobrança", "não reconheço cobrança","pagamento não reconhecido"],
+            "Cancelamento": ["cancelar", "cancelamento", "encerrar", "encerramento","desistir", "parar", "sair", "finalizar conta","quero sair", "quero cancelar", "encerrar assinatura","não quero mais",
+            "cortar serviço", "descadastrar",
+            "cancelar plano", "cancelar assinatura"]
         }
         
         setores_encontrados = {setor: [] for setor in setores_regras}
