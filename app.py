@@ -16,6 +16,7 @@ st.set_page_config(page_title="Pipeline PLN - Triagem Inteligente", layout="wide
 @st.cache_resource
 def iniciar_recursos_pln():
     nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
     nltk.download('stopwords', quiet=True)
     nltk.download('vader_lexicon', quiet=True)
     try:
